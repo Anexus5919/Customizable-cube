@@ -1,0 +1,18 @@
+/* Fills all the white spaces */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Removes unnecessary scrolling issue */
+html,
+body {
+    overflow: hidden;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
