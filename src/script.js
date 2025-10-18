@@ -73,7 +73,7 @@ debugObject.spin = () => {
 cubeTweaks.add(debugObject, 'spin')
 
 // Segmentation tweak
-debugObject.subdivision = 2
+debugObject.subdivision = 1
 cubeTweaks.add(debugObject, 'subdivision').min(1).max(20).step(1).onFinishChange(() => {
     mesh.geometry.dispose()
     mesh.geometry = new THREE.BoxGeometry(
