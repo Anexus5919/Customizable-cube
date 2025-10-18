@@ -38,13 +38,13 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 
 // Object
-const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2)
+const geometry = new THREE.BoxGeometry(1, 1, 1, 1, 1, 1)
 const material = new THREE.MeshBasicMaterial({ color: debugObject.color, wireframe: true })
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 
 // Tweak Folder
-const cubeTweaks = gui.addFolder('Awaesome tweaks')
+const cubeTweaks = gui.addFolder('Awesome tweaks')
 // cubeTweaks.hide()
 
 // x position tweak
@@ -74,7 +74,7 @@ cubeTweaks.add(debugObject, 'spin')
 
 // Segmentation tweak
 debugObject.subdivision = 1
-cubeTweaks.add(debugObject, 'subdivision').min(1).max(20).step(1).onFinishChange(() => {
+cubeTweaks.add(debugObject, 'subdivision').min(1).max(20).step(1).onChange(() => {
     mesh.geometry.dispose()
     mesh.geometry = new THREE.BoxGeometry(
         1, 1, 1,
